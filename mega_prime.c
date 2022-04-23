@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,r,sum=0,count=0,flag=0;
+    int temp=0,sum=0,count=0,i,n,r;
     scanf("%d",&n);
     for(i=2;i<n;i++)
     {
@@ -12,18 +12,19 @@ int main()
     {
         while(n>0)
         {
+            sum=0;
             r=n%10;
             for(i=2;i<r;i++)
             {
                 if(r%i==0)
                 sum++;
             }
-            if(r==1)
-            flag++;
+            if (r==1)
+            temp++;
             n=n/10;
         }
     }
-    if(count==0&&sum==0&&flag!=1)
+    if(count ==0&& sum==0&&temp!=1)
     printf("Mega Prime");
     else
     printf("Not Mega Prime");
