@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,lcm;
+    int gcd,a,b,lcm,i;
     scanf("%d %d",&a,&b);
-    lcm=a>b?a:b;
-    while(1)
+    for(i=1;i<=a&&i<=b;i++)
     {
-        if(lcm%a==0&&lcm%b==0)
+        if(a%i==0&&b%i==0)
         {
-            printf("%d",lcm);
-            break;
+            gcd=i;
         }
-        lcm++;
     }
+    lcm=(a*b)/gcd;
+    printf("%d",lcm);
     return 0;
 }
