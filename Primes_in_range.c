@@ -2,11 +2,11 @@
 #include<math.h>
 int main()
 {
-    int n,m,i,j,count=0,c=0;
-    scanf("%d %d",&n,&m);
-    if(n==1)
-    n=2;
-    for(i=n;i<=m;i++)
+    int i,sqr=0,m,n,j,count=0;
+    scanf("%d %d ",&m,&n);
+    if(m==1)
+    m=2;
+    for(i=m;i<=n;i++)
     {
         count=0;
         for(j=2;j<=sqrt(i);j++)
@@ -15,8 +15,9 @@ int main()
             count++;
         }
         if(count==0)
-        c++;
+        sqr++;
     }
-    printf("%d",c);
+    printf("%d",sqr);
+    return 0;
     return 0;
 }
