@@ -2,25 +2,29 @@
 #include<math.h>
 int main()
 {
-    int n,temp,sum=0,c=0,r;
+    int n,t=0,r,sum=0,temp;
     scanf("%d",&n);
     temp=n;
     while(temp>0)
     {
         temp=temp/10;
-        c++;
+        t++;
     }
     temp=n;
     while(temp>0)
     {
         r=temp%10;
-        sum=sum+pow(r,c);
+        sum=sum+pow(r,t);
         temp=temp/10;
-        c--;
+        t--;
     }
     if(sum==n)
-    printf("True");
+    {
+        printf("True");
+    }
     else
-    printf("False");
+    {
+        printf("False");
+    }
     return 0;
 }
