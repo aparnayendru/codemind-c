@@ -14,8 +14,8 @@ int main()
         {
             if(i%2==0)
             {
-                count++;
-                break;
+              count++;
+              break;
             }
         }
     }
