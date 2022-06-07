@@ -1,25 +1,27 @@
 #include<stdio.h>
 int main()
 {
-    int a[100],i,k=0,r,n;
+    int n,i,k=0,r;
     scanf("%d",&n);
+    int arr[100];
     while(n>0)
     {
         r=n%10;
-        a[k]=r;
+        arr[k]=r;
         k++;
         n=n/10;
     }
     for(i=k-1;i>=0;i--)
     {
-        if(a[i]==6)
+        if(arr[i]==6)
         {
-            a[i]=9;
+            arr[i]=9;
             break;
         }
     }
     for(i=k-1;i>=0;i--)
     {
-        printf("%d",a[i]);
+        printf("%d",arr[i]);
     }
+    return 0;
 }
