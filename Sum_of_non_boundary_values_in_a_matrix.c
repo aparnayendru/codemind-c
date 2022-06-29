@@ -15,13 +15,13 @@ int main()
     {
         for(j=0;j<m;j++)
         {
-            if(i==0||j==0||i==n-1||j==m-1)
+            if(i==0 ||j==m-1 || j==0||i==n-1)
             {
-                continue;
+              continue;
             }
             else
             {
-                sum=sum+arr[i][j];
+                sum+=arr[i][j];
             }
         }
     }
